@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional CV Portfolio</title>
+    <meta name="description"
+        content="Explore my portfolio showcasing a modern SAAS dashboard, crypto tracker, e-commerce applications, and professional web developer experience.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=2.0.3">
+</head>
+
+<body>
+
+    <!-- Twinkling Starry Background for Dark Mode -->
+    <div id="stars-container"></div>
+
+    <!-- Glowing Background Blobs -->
+    <div class="blob blob-1" id="blob-1"></div>
+    <div class="blob blob-2" id="blob-2"></div>
+    <div class="blob blob-3" id="blob-3"></div>
+
+    <!-- Header Navigation -->
+    <header class="header" id="main-header">
+        <div class="nav-container">
+            <a href="#home" class="logo" id="nav-logo">
+                <span class="logo-dot"></span>Portfolio
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active" id="link-home">Home</a>
+                <a href="#projects" class="nav-link" id="link-projects">Projects</a>
+                <a href="#contact" class="nav-link" id="link-contact">CV</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle light/dark theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <span class="status-badge"><span class="status-dot"></span>Open to Work</span>
+                <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle navigation menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <a href="#home" class="logo" id="drawer-logo">
+                <span class="logo-dot"></span>Portfolio
+            </a>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button class="theme-toggle" id="drawer-theme-toggle-btn" aria-label="Toggle light/dark theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="drawer-close" id="drawer-close-btn" aria-label="Close menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="drawer-menu">
+            <a href="#home" class="drawer-link" id="drawer-link-home">Home</a>
+            <a href="#projects" class="drawer-link" id="drawer-link-projects">Projects</a>
+            <a href="#contact" class="drawer-link" id="drawer-link-contact">CV</a>
+        </nav>
+        <div class="drawer-footer">
+            <div style="display: flex; justify-content: center; width: 100%;"><span class="status-badge"><span class="status-dot"></span>Open to Work</span></div>
+        </div>
+    </div>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-greeting" id="hero-welcome">Hello, I'm <span class="wave-emoji">👋</span></span>
+                    <h1 class="hero-title" id="hero-main-title">Sithumi Sanulya <br><span
+                            class="hero-title-orange">Randombage</span></h1>
+                    <div class="hero-subtitle">BSc (Hons) Computer Science Undergraduate</div>
+                    <p class="hero-description" id="hero-desc">
+                        Passionate about building efficient and user-friendly web applications. Always eager to learn,
+                        create and contribute to real-world solutions.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary" id="btn-hero-work">View My Projects <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                        <a href="assets/SithumiSanulya_CV.pdf" download="SithumiSanulya_CV.pdf"
+                            class="btn btn-secondary" id="btn-hero-cv">
+                            Download CV <i class="fa-solid fa-download"></i>
+                        </a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://github.com/SSRandombage" target="_blank" class="social-icon"
+                            aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sithumi-sanulya-69863b397" target="_blank"
+                            class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image-column">
+                    <div class="hero-orbit-ring"></div>
+                    <div class="hero-image-wrapper">
+                        <img src="assets/profile.png?v=2.0.3" alt="Sithumi Sanulya" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Portfolio Section -->
+        <section class="portfolio-section" id="projects">
+            <div class="container">
+                <div class="portfolio-header">
+                    <div>
+                        <span class="section-tag">PORTFOLIO</span>
+                        <h2 class="section-title">Completed Projects</h2>
+                    </div>
+                    <a href="#projects" class="see-all-link" id="link-see-all">See All Projects <i
+                            class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card" id="project-card-1">
+                        <div class="project-img-wrapper">
+                            <img src="assets/PrintSmart.png?v=2.0.3" alt="PrintSmart Web Application screenshot"
+                                class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-type-badge group">Group Project</span>
+                            <h3 class="project-title">PrintSmart</h3>
+                            <p class="project-desc">A web-based business management system designed for a printing shop.
+                                Developed the Employee Management module and implemented core functions including add,
+                                update, delete, search, and testing processes.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card" id="project-card-2">
+                        <div class="project-img-wrapper">
+                            <img src="assets/ComputerHub.png?v=2.0.3" alt="ComputerHub E-commerce screenshot" class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-type-badge individual">Individual Project</span>
+                            <h3 class="project-title">ComputerHub</h3>
+                            <p class="project-desc">A responsive online store for computer parts featuring user
+                                authentication, shopping cart, product management, and a dedicated administrative panel.
+                            </p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>PHP</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card" id="project-card-3">
+                        <div class="project-img-wrapper">
+                            <img src="assets/BloomnBlossom.png?v=2.0.3" alt="Bloom & Blossom flower shop website screenshot"
+                                class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-type-badge individual">Individual Project</span>
+                            <h3 class="project-title">Bloom & Blossom</h3>
+                            <p class="project-desc">A responsive flower shop web application managing order flows, user
+                                credentials, product catalog adjustments, checkout shopping carts, and administrative
+                                logs.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="project-card" id="project-card-4">
+                        <div class="project-img-wrapper">
+                            <img src="assets/StudentDashboard.png?v=2.0.3" alt="StudentDashboard Power BI screenshot"
+                                class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-type-badge individual">Individual Project</span>
+                            <h3 class="project-title">StudentDashboard</h3>
+                            <p class="project-desc">An interactive student performance dashboard visualizing key
+                                academic metrics, trends, charts, filters, and KPI cards to present insights from
+                                student records.</p>
+                            <div class="project-tags">
+                                <span>Power BI</span>
+                                <span>Data Analytics</span>
+                                <span>KPI Cards</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- CV Section -->
+        <section class="cv-section" id="contact">
+            <div class="container">
+                <div class="cv-header-container">
+                    <div class="cv-header-text">
+                        <span class="section-tag">DESIGNED CV</span>
+                        <h2 class="section-title">My CV</h2>
+                    </div>
+                    <div class="cv-actions">
+                        <a href="assets/SithumiSanulya_CV.pdf" download="SithumiSanulya_CV.pdf" class="btn btn-primary"
+                            id="btn-download-cv">
+                            <i class="fa-solid fa-download"></i> Download CV
+                        </a>
+                        <a href="assets/SithumiSanulya_CV.pdf" target="_blank" class="btn btn-secondary"
+                            id="btn-original-pdf">
+                            <i class="fa-solid fa-file-pdf"></i> Original PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Main CV Sheet -->
+                <div class="cv-sheet-card">
+                    <!-- Top Header Block -->
+                    <div class="cv-sheet-header">
+                        <div class="cv-header-photo-wrapper">
+                            <img src="assets/cv_profile.jpg?v=2.0.3" alt="Sithumi Sanulya profile photo" class="cv-header-photo">
+                        </div>
+                        <div class="cv-header-details">
+                            <h3 class="cv-header-name">Sithumi Sanulya</h3>
+                            <div class="cv-header-grid">
+                                <div class="cv-grid-item">
+                                    <span class="cv-grid-label">PHONE</span>
+                                    <span class="cv-grid-value">077 9400550</span>
+                                </div>
+                                <div class="cv-grid-item">
+                                    <span class="cv-grid-label">EMAIL</span>
+                                    <span class="cv-grid-value">sithusanulya@gmail.com</span>
+                                </div>
+                                <div class="cv-grid-item">
+                                    <span class="cv-grid-label">LINKEDIN</span>
+                                    <a href="https://www.linkedin.com/in/sithumi-sanulya-69863b397" target="_blank"
+                                        class="cv-grid-value cv-link">linkedin.com/in/sithumi-sanulya...</a>
+                                </div>
+                                <div class="cv-grid-item">
+                                    <span class="cv-grid-label">GITHUB</span>
+                                    <a href="https://github.com/SSRandombage" target="_blank"
+                                        class="cv-grid-value cv-link">github.com/SSRandombage</a>
+                                </div>
+                                <div class="cv-grid-item cv-grid-address">
+                                    <span class="cv-grid-label">ADDRESS</span>
+                                    <span class="cv-grid-value">C 1/90, Pallemakadawara, Ganethenna, Hingula</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cv-sheet-divider"></div>
+
+                    <!-- Bottom Two Column Body -->
+                    <div class="cv-sheet-body">
+                        <!-- Left Column (PROFILE, SKILLS, CLUBS, LANGUAGES) -->
+                        <div class="cv-body-left">
+                            <!-- Profile Section -->
+                            <div class="cv-body-section">
+                                <h4 class="cv-body-heading">PROFILE</h4>
+                                <p class="cv-body-text">
+                                    Second-year Computer Science undergraduate seeking an IT Internship. Interested in
+                                    software development, analytical problem-solving and emerging technologies. Looking
+                                    forward to applying academic knowledge in a professional environment, enhancing
+                                    technical expertise, and contributing effectively to collaborative projects.
+                                </p>
+                            </div>
+
+                            <!-- Skills Section -->
+                            <div class="cv-body-section">
+                                <h4 class="cv-body-heading">SKILLS</h4>
+                                <div class="cv-skill-group">
+                                    <span class="cv-skill-subheading">Soft Skills</span>
+                                    <p class="cv-body-text">Presentation skills, Multitasking, Team collaboration</p>
+                                </div>
+                                <div class="cv-skill-group">
+                                    <span class="cv-skill-subheading">Technical Skills</span>
+                                    <p class="cv-body-text">Java, C, C++, JavaScript, HTML, CSS, PHP, PowerBI, SQL,
+                                        MongoDB, Firebase, IntelliJ IDEA, NetBeans, AJAX, JSON, GitHub</p>
+                                </div>
+                            </div>
+
+                            <!-- Clubs and Societies Section -->
+                            <div class="cv-body-section">
+                                <h4 class="cv-body-heading">CLUBS AND SOCIETIES</h4>
+                                <div class="cv-club-group">
+                                    <span class="cv-club-name">Leo Club in SLIIT City Uni</span>
+                                    <p class="cv-body-text">Current general member</p>
+                                </div>
+                            </div>
+
+                            <!-- Languages Section -->
+                            <div class="cv-body-section">
+                                <h4 class="cv-body-heading">LANGUAGES</h4>
+                                <p class="cv-body-text">Sinhala - Native<br>English - Basic</p>
+                            </div>
+                        </div>
+
+                        <!-- Right Column (EDUCATION, PROJECTS) -->
+                        <div class="cv-body-right">
+                            <!-- Education Section -->
+                            <div class="cv-body-section">
+                                <h4 class="cv-body-heading">EDUCATION</h4>
+                                <div class="cv-edu-list">
+                                    <!-- Education 1 -->
+                                    <div class="cv-edu-item">
+                                        <div class="cv-edu-meta">
+                                            <h5 class="cv-edu-school">SLIIT City Uni</h5>
+                                            <span class="cv-edu-date">2024 - Present</span>
+                                        </div>
+                                        <p class="cv-edu-degree">Undergraduate in BSc (Hons) Computer Science</p>
+                                    </div>
+                                    <!-- Education 2 -->
+                                    <div class="cv-edu-item">
+                                        <div class="cv-edu-meta">
+                                            <h5 class="cv-edu-school">Peradeniya Central College - Peradeniya</h5>
+                                            <span class="cv-edu-date">2020 - 2022</span>
+                                        </div>
+                                        <p class="cv-edu-degree">Completed A/Ls in Combined Maths stream in 2022</p>
+                                    </div>
+                                    <!-- Education 3 -->
+                                    <div class="cv-edu-item">
+                                        <div class="cv-edu-meta">
+                                            <h5 class="cv-edu-school">Sarasavi Uyana Maha Vidyalaya - Peradeniya</h5>
+                                            <span class="cv-edu-date">2009 - 2019</span>
+                                        </div>
+                                        <p class="cv-edu-degree">Completed O/Ls in 2019</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Projects Section -->
+                            <div class="cv-body-section">
+                                <h4 class="cv-body-heading">PROJECTS</h4>
+                                <div class="cv-timeline-list">
+                                    <!-- Project 1 -->
+                                    <div class="cv-timeline-item">
+                                        <div class="cv-timeline-dot"></div>
+                                        <div class="cv-timeline-content">
+                                            <div class="cv-proj-meta">
+                                                <h5 class="cv-proj-title">Bloom & Blossom</h5>
+                                                <span class="cv-proj-badge">Individual Project</span>
+                                            </div>
+                                            <div class="cv-proj-subtitle">Web Application Development – Flower Shop
+                                                Management System</div>
+                                            <ul class="cv-proj-bullets">
+                                                <li>Developed a responsive flower shop web application using HTML, CSS,
+                                                    JavaScript, PHP, and MySQL.</li>
+                                                <li>Implemented user authentication, product management, shopping cart
+                                                    functionality, order management, and an admin dashboard.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- Project 2 -->
+                                    <div class="cv-timeline-item">
+                                        <div class="cv-timeline-dot"></div>
+                                        <div class="cv-timeline-content">
+                                            <div class="cv-proj-meta">
+                                                <h5 class="cv-proj-title">ComputerHub</h5>
+                                                <span class="cv-proj-badge">Individual Project</span>
+                                            </div>
+                                            <div class="cv-proj-subtitle">Web application and development – E-commerce
+                                                website</div>
+                                            <ul class="cv-proj-bullets">
+                                                <li>Built a responsive online store for computer parts using HTML, CSS,
+                                                    JavaScript, and PHP.</li>
+                                                <li>Implemented authentication, shopping cart, product management and
+                                                    admin panel.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- Project 3 -->
+                                    <div class="cv-timeline-item">
+                                        <div class="cv-timeline-dot"></div>
+                                        <div class="cv-timeline-content">
+                                            <div class="cv-proj-meta">
+                                                <h5 class="cv-proj-title">StudentDashboard</h5>
+                                                <span class="cv-proj-badge">Individual Project</span>
+                                            </div>
+                                            <div class="cv-proj-subtitle">Power BI Dashboard</div>
+                                            <ul class="cv-proj-bullets">
+                                                <li>Designed an interactive student performance dashboard using Power
+                                                    BI.</li>
+                                                <li>Visualized key performance metrics with charts, filters and KPI
+                                                    cards to present meaningful insights from student data.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- Project 4 -->
+                                    <div class="cv-timeline-item">
+                                        <div class="cv-timeline-dot"></div>
+                                        <div class="cv-timeline-content">
+                                            <div class="cv-proj-meta">
+                                                <h5 class="cv-proj-title">PrintSmart</h5>
+                                                <span class="cv-proj-badge">Group Project</span>
+                                            </div>
+                                            <div class="cv-proj-subtitle">Project and professional aspects – Web based
+                                                business management system</div>
+                                            <ul class="cv-proj-bullets">
+                                                <li>Built a business management system for a printing shop using HTML,
+                                                    CSS, JavaScript, PHP, and MySQL.</li>
+                                                <li>Developed the Employee Management module.</li>
+                                                <li>Implemented add, update, delete, search, and testing.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container-simple">
+            <span>Sithumi Sanulya</span>
+            <span>2026</span>
+        </div>
+    </footer>
+
+
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast-notification">
+        <div class="toast-content">
+            <i class="fa-solid fa-circle-check toast-icon"></i>
+            <div class="toast-message">
+                <div class="toast-title">Message Sent!</div>
+                <div class="toast-desc">Thank you. I'll get back to you shortly.</div>
+            </div>
+        </div>
+        <button class="toast-close" id="btn-toast-close" aria-label="Close toast">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <!-- Script File -->
+    <script src="script.js?v=2.0.2"></script>
+</body>
+
+</html>

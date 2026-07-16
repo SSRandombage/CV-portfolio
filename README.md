@@ -1,2 +1,2 @@
 # CV-portfolio
-Personal Portfolio
+Portfolio
